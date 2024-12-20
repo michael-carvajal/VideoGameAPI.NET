@@ -4,6 +4,6 @@ namespace VideoGameAPI.Data
 {
     public class VideoGameDbContext(DbContextOptions<VideoGameDbContext> options) : DbContext(options)
     {
-        public int MyProperty { get; set; }
+        public  DbSet<VideoGame> VideoGames => Set<VideoGame>();
     }
 }
